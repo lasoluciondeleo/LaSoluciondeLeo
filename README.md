@@ -33,7 +33,49 @@
     font-family:'Times New Roman',Times,serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
     font-size:14px;color:var(--gold);
   }
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Make the main wrapper fit mobile screens with clean padding */
+  .wrap {
+    padding: 0 16px !important;
+  }
 
+  /* Adjust hero / header container to stack contents vertically */
+  header, section, .hero-content {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  /* Scale down large headings so they don't break off the screen */
+  h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  /* Stack action buttons cleanly on top of each other */
+  .cta-buttons, .button-group {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .cta-buttons a, .button-group a, button {
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Keep the gold seal / logo scaled down and centered on phones */
+  .hero-logo, img, svg {
+    max-width: 180px !important;
+    margin: 20px auto !important;
+  }
+}
   /* ---------- Top bar ---------- */
   .topbar{
     position:sticky;top:0;z-index:50;
